@@ -1,6 +1,5 @@
 "use strict";
-
-const { default: axios } = require("axios");
+const fetch = require("node-fetch");
 
 class Npmtest {
   constructor(options = {}) {
@@ -24,12 +23,23 @@ class Npmtest {
   }
 
   async getCustomer() {
-    return await axios.get("https://api.finmo.net/v1/customer", {
-      headers: {
-        Authorization: this.getAuthHeaderToken(),
-      },
-    });
+    try {
+      const response = await fetch("https://api.finmo.net/v1/customer", {
+        method: "get",
+        headers: {
+          Authorization: this.getAuthHeaderToken(),
+        },
+      });
+      const body = await response.json();
+
+      return body;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
+async function get() {}
+
+get().then((res) => console.log(res));
 module.exports = Npmtest;
