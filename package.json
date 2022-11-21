@@ -1,5 +1,5 @@
 {
-  "name": "npmtest",
+  "name": "lsdon",
   "version": "1.0.0",
   "description": "Npm test leanring",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/lakshay-saini-au8/npmtest.git"
   },
   "keywords": [
-    "npmtest"
+    "lsdon"
   ],
   "author": "lakshay saini",
   "license": "ISC",
