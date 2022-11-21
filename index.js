@@ -24,7 +24,7 @@ class Npmtest {
   }
 
   async getCustomer() {
-    return await axios.get(url, {
+    return await axios.get("https://api.finmo.net/v1/customer", {
       headers: {
         Authorization: this.getAuthHeaderToken(),
       },
