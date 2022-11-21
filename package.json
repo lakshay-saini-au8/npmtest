@@ -1,0 +1,25 @@
+{
+  "name": "npmtest",
+  "version": "1.0.0",
+  "description": "Npm test leanring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakshay-saini-au8/npmtest.git"
+  },
+  "keywords": [
+    "npmtest"
+  ],
+  "author": "lakshay saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lakshay-saini-au8/npmtest/issues"
+  },
+  "homepage": "https://github.com/lakshay-saini-au8/npmtest#readme",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
+}
