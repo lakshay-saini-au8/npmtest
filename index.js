@@ -17,7 +17,9 @@ class Npmtest {
   }
   getAuthHeaderToken() {
     let basic_auth = `${this.api_key}:${this.secret_key}`;
-    let authentication = `Basic ${btoa(basic_auth)}`;
+    let buff = Buffer.from(basic_auth);
+    let base64data = buff.toString("base64");
+    let authentication = `Basic ${base64data}`;
 
     return authentication;
   }
