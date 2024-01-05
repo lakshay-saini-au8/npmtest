@@ -18,15 +18,21 @@ jobs:
             if (comment.body.startsWith('/attempt')) {
               if (!issue.assignee) {
                 await github.rest.issues.addAssignees({
+                  owner:"lakshay-saini-au8",
+                  repo:"npmtest",
                   issue_number: issue.number,
                   assignees: [comment.user.login]
                 });
                 await github.rest.issues.createComment({
+                  owner:"lakshay-saini-au8",
+                  repo:"npmtest",
                   issue_number: issue.number,
                   body: 'Assigned the issue to you!'
                 });
               } else {
                 await github.rest.issues.createComment({
+                  owner:"lakshay-saini-au8",
+                  repo:"npmtest",
                   issue_number: issue.number,
                   body: 'This issue is already assigned. Tag a maintainer if you need to take over.'
                 });
